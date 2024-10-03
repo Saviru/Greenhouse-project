@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Home</title>
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="app.js" defer></script>
   <script type="text/javascript" src="readings.js"></script>
@@ -18,25 +18,19 @@
         </button>
       </li>
       <li class="active">
-        <a href="./index">
+        <a href="index.html">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M520-640v-160q0-17 11.5-28.5T560-840h240q17 0 28.5 11.5T840-800v160q0 17-11.5 28.5T800-600H560q-17 0-28.5-11.5T520-640ZM120-480v-320q0-17 11.5-28.5T160-840h240q17 0 28.5 11.5T440-800v320q0 17-11.5 28.5T400-440H160q-17 0-28.5-11.5T120-480Zm400 320v-320q0-17 11.5-28.5T560-520h240q17 0 28.5 11.5T840-480v320q0 17-11.5 28.5T800-120H560q-17 0-28.5-11.5T520-160Zm-400 0v-160q0-17 11.5-28.5T160-360h240q17 0 28.5 11.5T440-320v160q0 17-11.5 28.5T400-120H160q-17 0-28.5-11.5T120-160Zm80-360h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
           <span>Dashboard</span>
         </a>
       </li>
       <li>
-        <a href="./Reports">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M320-480v-80h320v80H320Zm0-160v-80h320v80H320Zm-80 240h300q29 0 54 12.5t42 35.5l84 110v-558H240v400Zm0 240h442L573-303q-6-8-14.5-12.5T540-320H240v160Zm480 80H240q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80Zm-480-80v-640 640Zm0-160v-80 80Z"/></svg>
-          <span>Reports</span>
-        </a>
-      </li>
-      <li>
-        <a href="./Analytics">
+        <a href="Analytics.html">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-120v-80l80-80v160h-80Zm160 0v-240l80-80v320h-80Zm160 0v-320l80 81v239h-80Zm160 0v-239l80-80v319h-80Zm160 0v-400l80-80v480h-80ZM120-327v-113l280-280 160 160 280-280v113L560-447 400-607 120-327Z"/></svg>
           <span>Analytics</span>
         </a>
       </li>
       <li>
-        <a href="./Notifications">
+        <a href="notifications.html">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/></svg>
           <span>Notifications</span>
         </a>
@@ -47,23 +41,55 @@
     <div class="flex-cont">
       <div class="item item-1">
         <h3>Temperature</h3>
-        <div class="indicator">---</div>
-        <div class="dt-stts" id="temp">Na</div>
+        <br>
+        <div class="indicator">
+          <div class="gauge temp">
+            <div class="gauge__body">
+              <div class="gauge__fill tempFill"></div>
+              <div class="gauge__cover tempCover">-Na-</div>
+            </div>
+          </div>
+        </div>
+        <p class="dt-icon temp-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(208, 208, 208, 1);transform: ;msFilter:;"><path d="M9 16a3.001 3.001 0 0 0 6 0c0-.353-.072-.686-.184-1H9.184A2.962 2.962 0 0 0 9 16z"></path><path d="M18 6V4h-3.185A2.995 2.995 0 0 0 12 2c-1.654 0-3 1.346-3 3v5.8A6.027 6.027 0 0 0 6 16c0 3.309 2.691 6 6 6s6-2.691 6-6a6.027 6.027 0 0 0-3-5.2V10h3V8h-3V6h3zm-4.405 6.324A4.033 4.033 0 0 1 16 16c0 2.206-1.794 4-4 4s-4-1.794-4-4c0-1.585.944-3.027 2.405-3.676l.595-.263V5a1 1 0 0 1 2 0v7.061l.595.263z"></path></svg></p>
       </div>
       <div class="item item-2">
         <h3>Humidity</h3>
-        <div class="indicator">---</div>
-        <div class="dt-stts" id="humid">Na</div>
+        <br>
+        <div class="indicator">
+          <div class="gauge humid">
+            <div class="gauge__body">
+              <div class="gauge__fill humidFill"></div>
+              <div class="gauge__cover humidCover">-Na-</div>
+            </div>
+          </div>
+        </div>
+        <p class="dt-icon"><svg class="dtt" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(208, 208, 208, 1);transform: ;msFilter:;"><path d="M11.474 14.42a3.162 3.162 0 1 0 0 6.324 3.162 3.162 0 0 0 0-6.324zm3.936-.606a5.433 5.433 0 0 1 1.513 3.769 5.441 5.441 0 0 1-2.335 4.47c2.609-.803 4.771-2.767 5.737-5.142 1.338-3.288.09-5.761-1.999-8.005.066.288.103.592.103.898a4.175 4.175 0 0 1-3.019 4.01zm-3.577-4.003c0 1.34 1.087 2.419 2.42 2.419s2.423-1.087 2.423-2.419a2.418 2.418 0 0 0-2.417-2.417 2.425 2.425 0 0 0-2.426 2.417z"></path><path d="M7.303 21.093a5.435 5.435 0 0 1-1.276-3.51 5.441 5.441 0 0 1 4.8-5.408 4.162 4.162 0 0 1 3.99-6.492c-1.361-1.176-2.724-2.369-3.799-3.672.547 5.714-5.2 3.638-7.332 8.904-1.422 3.527-.138 7.892 3.617 10.178z"></path></svg></p>
       </div>
       <div class="item item-3">
         <h3>Soil moisture level</h3>
-        <div class="indicator">---</div>
-        <div class="dt-stts" id="soilmois">Na</div>
+        <br>
+        <div class="indicator">
+          <div class="gauge soilM">
+            <div class="gauge__body">
+              <div class="gauge__fill soilMFill"></div>
+              <div class="gauge__cover soilMCover">-Na-</div>
+            </div>
+          </div>
+        </div>
+        <p class="dt-icon soilM-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(208, 208, 208, 1);transform: ;msFilter:;"><path d="M8 13h2v3H8zm0 4h2v3H8zm3-2h2v3h-2zm0 4h2v3h-2zm3-6h2v3h-2zm0 4h2v3h-2z"></path><path d="M18.944 10.112C18.507 6.67 15.56 4 12 4 9.245 4 6.85 5.611 5.757 8.15 3.609 8.792 2 10.819 2 13c0 2.757 2.243 5 5 5v-2c-1.654 0-3-1.346-3-3 0-1.403 1.199-2.756 2.673-3.015l.582-.103.191-.559C8.149 7.273 9.895 6 12 6c2.757 0 5 2.243 5 5v1h1c1.103 0 2 .897 2 2s-.897 2-2 2h-1v2h1c2.206 0 4-1.794 4-4a4.008 4.008 0 0 0-3.056-3.888z"></path></svg></p>
       </div>
       <div class="item item-4">
         <h3>Light level</h3>
-        <div class="indicator">---</div>
-        <div class="dt-stts" id="lightlvl">Na</div>
+        <br>
+        <div class="indicator">
+          <div class="gauge ltl">
+            <div class="gauge__body">
+              <div class="gauge__fill ltlFill"></div>
+              <div class="gauge__cover ltlCover">-Na-</div>
+            </div>
+          </div>
+          <p class="dt-icon ltl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(208, 208, 208, 1);transform: ;msFilter:;"><path d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"></path></svg></p>
+        </div>
       </div>
       <div class="item item-5">
         <h3>Control status</h3>
