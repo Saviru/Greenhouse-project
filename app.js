@@ -94,6 +94,8 @@ function ltl() {
       return;
     }
     
+    console.log(value);
+
     gauge.querySelector(".ltlFill").style.transform = `rotate(${
       value / 2
     }turn)`;
