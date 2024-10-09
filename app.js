@@ -44,7 +44,7 @@ function temp() {
     }turn)`;
     gauge.querySelector(".tempCover").textContent = `${Math.round(
       value * 100
-    )}%`;
+    )}C`;
 
     if(value > 0.8){
       gauge.querySelector(".tempCover").style.color = "#9e4444de";
@@ -135,6 +135,40 @@ function ltl() {
   }
   setGaugeValue(gaugeElement, data[2]/100);
 }
+
+
+function showstts() {
+  if(data[1] < 40){
+      document.querySelector('.humid-stts').innerText = "On";}
+  else{
+      document.querySelector('.humid-stts').innerText = "Off";}
+
+  if(data[4] < 30){
+      document.querySelector('.temp-stts').innerText = "On";}
+  else{
+      document.querySelector('.temp-stts').innerText = "Off";}
+
+  if(data[2] < 40){
+      document.querySelector('.lit-stts').innerText = "On";}
+  else{
+      document.querySelector('.lit-stts').innerText = "Off";}
+
+  if(data[3] < 60){
+      document.querySelector('.wp-stts').innerText = "On";}
+  else{
+      document.querySelector('.wp-stts').innerText = "Off";}
+
+  if(data[4] > 26 || data[1] > 60){
+      document.querySelector('.fan-stts').innerText = "On";}
+  else{
+      document.querySelector('.fan-stts').innerText = "Off";}
+
+  if(data[4] > 30){
+      document.querySelector('.window-stts').innerText = "Opened";}
+  else{
+      document.querySelector('.window-stts').innerText = "Closed";}
+}
+
 
 setInterval(fetchValue, 5000);
 setInterval(temp, 5000);
