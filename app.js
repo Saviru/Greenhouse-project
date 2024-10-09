@@ -169,7 +169,7 @@ function showstts() {
       document.querySelector('.window-stts').innerText = "Closed";}
 }
 
-
+setInterval(showstts, 4000);
 setInterval(fetchValue, 5000);
 setInterval(temp, 5000);
 setInterval(humid, 5000);
