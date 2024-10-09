@@ -31,10 +31,6 @@ function fetchValue() {
 }
 setInterval(fetchValue, 4000);
 
-const toggleButton = document.getElementById('toggle-btn')
-const sidebar = document.getElementById('sidebar')
-
-
 function temp() {
   const gaugeElement = document.querySelector(".temp");
 

@@ -1,5 +1,6 @@
 var targetdoc = document.querySelector('.value-up');
-
+const toggleButton = document.getElementById('toggle-btn')
+const sidebar = document.getElementById('sidebar')
 
 function ctInd(sourceDoc, finalVal){
     document.querySelector(sourceDoc).innerText = finalVal;
