@@ -34,7 +34,7 @@ body{
   padding: 5px 1em;
   background-color: var(--secondary-clr);
   border-right: 1px solid var(--line-clr);
-
+  z-index: 1;
   position: sticky;
   top: 0;
   align-self: start;
