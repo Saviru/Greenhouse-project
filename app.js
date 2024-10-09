@@ -33,12 +33,7 @@ setInterval(fetchValue, 4000);
 
 const toggleButton = document.getElementById('toggle-btn')
 const sidebar = document.getElementById('sidebar')
-var targetdoc = document.querySelector('.value-up');
 
-
-function ctInd(sourceDoc, finalVal){
-    document.querySelector(sourceDoc).innerText = finalVal;
-}
 
 function temp() {
   const gaugeElement = document.querySelector(".temp");
@@ -152,20 +147,6 @@ setInterval(soilM, 5000);
 setInterval(ltl, 5000);
 
 
-function toggleSidebar(){
-  sidebar.classList.toggle('close')
-  toggleButton.classList.toggle('rotate')
-
-}
-
-window.addEventListener('resize', function(){
-  if(window.innerWidth <= 800){
-    sidebar.classList.remove('close')
-  }
-  else{
-    sidebar.classList.add('close')
-  }
-})
 
 
 
